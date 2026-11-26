@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask POST Sederhana</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <main class="card">
+        <h1>Form Method POST</h1>
+
+        <form action="{{ url_for('proses') }}" method="POST">
+            <label for="nama">Nama:</label>
+            <!-- TextField -->
+            <input type="text" id="nama" name="nama" value="{{ nama or '' }}" placeholder="Masukkan nama Anda">
+            <!-- Button -->
+            <button type="submit">Kirim</button>
+        </form>
+
+        <!-- Label hasil -->
+        {% if hasil %}
+            <p class="hasil">{{ hasil }}</p>
+        {% endif %}
+    </main>
+</body>
+</html>
