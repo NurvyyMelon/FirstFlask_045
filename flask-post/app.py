@@ -26,3 +26,4 @@ def proses():
 if __name__ == "__main__":
     # debug=True hanya untuk tahap pengembangan
     app.run(debug=True)
+    
